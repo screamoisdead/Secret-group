@@ -7,14 +7,38 @@ namespace Secret_group
     class MemberDetails
     {
         //Details about all the members
-        public static GroupMember memberNils()
+        //Name, Age, Birthday, Favorite food, Favorite band, Favorite movie, What you love, What you hate
+        //Zodiac sign, Superpower, What drives your programming
+        public static GroupMember memberAndrei()
         {
-            return new GroupMember("Nils", 25);
+            return new GroupMember(
+            "Andrei",
+            26,
+            "12th of January",
+            "Carbonara",
+            "Two steps from hell",
+            "The lord of the rings",
+            "Travelling",
+            "Olives",
+            "Capricorn",
+            "Instant olive detection",
+            "Problem solving");
         }
 
-        public static GroupMember memberJonna()
+        static GroupMember memberJesper()
         {
-            return new GroupMember("Jonna", 30);
+            return new GroupMember(
+            "Jesper",
+            28,
+            "29th of May",
+            "Lambracks",
+            "Lars Winnerbäck",
+            "Catch me if you can",
+            "The simple stuff",
+            "People who film at concerts",
+            "Gemini",
+            "Teleportation",
+            "Freedom");
         }
 
     }
