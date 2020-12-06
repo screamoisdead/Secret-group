@@ -25,7 +25,7 @@ namespace Secret_group
             "Problem solving");
         }
 
-        static GroupMember memberJesper()
+        public static GroupMember memberJesper()
         {
             return new GroupMember(
             "Jesper",
