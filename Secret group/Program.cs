@@ -8,17 +8,15 @@ namespace Secret_group
     {
         static void Main(string[] args)
         {
-
-            //Intro message
+ 
+            //Get method IntroMessage from class WelcomeMessage
             WelcomeMessage.IntroMessage();
 
-            //Login
+            //Get method Logintry from class LoginClass
             LoginClass.LoginTry();
 
-            //Member list
-            MemberList.listOfMembers();
-
-
+            //Get method menuOfActions from class MenuList
+            MenuList.menuOfActions();
 
         }
     }

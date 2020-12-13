@@ -171,7 +171,7 @@ namespace Secret_group
 
         }
 
-        //Argument based constructor
+        //Constructor where all fields must be applied
         public GroupMember(
             string name,
             int age,
@@ -197,6 +197,33 @@ namespace Secret_group
             this.superpower = superpower;
             this.drivenbywhat = drivenbywhat;
         }
-   
+
+        public override string ToString()
+        {
+            //To string override that will show all the info about a specific member that can be called through
+            //Console.WriteLine(listOfMember[Their index number]);
+            //The \r\n helps to add a new line to make the design output look better
+            return $"--------------------------------------------\r\n" +
+                   $"{name} is {age} years old.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"Birthday: {birthday}.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"Favorite food: {food}.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"Favorite band: {band}.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"Favorite movie: {movie}.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"They love: {ilove}.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"They hate: {ihate}.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"Zodiac sign: {zodiac}.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"Desired superpower: {superpower}.\r\n" +
+                   $"--------------------------------------------\r\n" +
+                   $"Their programing is driven by {drivenbywhat}\r\n" +
+                   $"--------------------------------------------\r\n";
+        }
     }
 }

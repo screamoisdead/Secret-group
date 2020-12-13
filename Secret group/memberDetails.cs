@@ -41,5 +41,117 @@ namespace Secret_group
             "Freedom");
         }
 
+        public static GroupMember memberLeroy()
+        {
+            return new GroupMember(
+            "Leroy",
+            32,
+            "22nd of October",
+            "Pizza",
+            "We the best music",
+            "Matrix",
+            "Chocolate",
+            "Caviar",
+            "Libra",
+            "Flying",
+            "Dynamic");
+        }
+
+        public static GroupMember memberMalin()
+        {
+            return new GroupMember(
+            "Malin",
+            32,
+            "22nd of October",
+            "Pizza",
+            "We the best music",
+            "Matrix",
+            "Chocolate",
+            "Caviar",
+            "Libra",
+            "Flying",
+            "Dynamic");
+        }
+
+        public static GroupMember memberJonna()
+        {
+            return new GroupMember(
+            "Jonna",
+            32,
+            "22nd of October",
+            "Pizza",
+            "We the best music",
+            "Matrix",
+            "Chocolate",
+            "Caviar",
+            "Libra",
+            "Flying",
+            "Dynamic");
+        }
+
+        public static GroupMember memberGurra()
+        {
+            return new GroupMember(
+            "Gurra",
+            32,
+            "22nd of October",
+            "Pizza",
+            "We the best music",
+            "Matrix",
+            "Chocolate",
+            "Caviar",
+            "Libra",
+            "Flying",
+            "Dynamic");
+        }
+
+        public static GroupMember memberLinus()
+        {
+            return new GroupMember(
+            "Linus",
+            32,
+            "22nd of October",
+            "Pizza",
+            "We the best music",
+            "Matrix",
+            "Chocolate",
+            "Caviar",
+            "Libra",
+            "Flying",
+            "Dynamic");
+        }
+
+        public static GroupMember memberNils()
+        {
+            return new GroupMember(
+            "Nils",
+            32,
+            "22nd of October",
+            "Pizza",
+            "We the best music",
+            "Matrix",
+            "Chocolate",
+            "Caviar",
+            "Libra",
+            "Flying",
+            "Dynamic");
+        }
+
+        public static GroupMember memberYulrok()
+        {
+            return new GroupMember(
+            "Yulrok",
+            32,
+            "22nd of October",
+            "Pizza",
+            "We the best music",
+            "Matrix",
+            "Chocolate",
+            "Caviar",
+            "Libra",
+            "Flying",
+            "Dynamic");
+        }
+
     }
 }
