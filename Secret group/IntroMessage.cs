@@ -7,6 +7,7 @@ namespace Secret_group
 {
     class WelcomeMessage
     {
+        //Creates a method that will be displayed at first in the program
         public static void IntroMessage()
         {
             Console.WriteLine("╔══════════════════════════════════════════╗");

@@ -6,13 +6,15 @@ namespace Secret_group
 {
     class MenuList
     {
-
-        public static void menuOfActions()
+        //This method creates the whole menu
+        public static void MenuOfActions()
         {
-
+            //Logical argument that keeps the menu repeating after each choice
+            //Until you decide to log out.
             bool loggedIn = true;
 
-            List<GroupMember> listOfMembers = addMembersToList();
+            //Calls method that will add all the members with their details into a list
+            List<GroupMember> listOfMembers = AddMembersToList();
 
             while (loggedIn)
             {
@@ -32,7 +34,7 @@ namespace Secret_group
                     case 1:
                         Console.Clear();
                         //Calls for method to show member list
-                        displayMembers(listOfMembers);
+                        DisplayMembers(listOfMembers);
                         //Asks user to press enter to return to main screen
                         returnToMenu();
                         break;
@@ -44,15 +46,22 @@ namespace Secret_group
                         Console.WriteLine("║----Would you like to read more about?----║");
                         Console.WriteLine("╚══════════════════════════════════════════╝");
 
-                        displayMembers(listOfMembers);
+                        //Calls method that will show all the members
+                        DisplayMembers(listOfMembers);
 
                         //Ask user to choose which person to read about
                         int readMore = Convert.ToInt32(Console.ReadLine());
 
+                        //Select the member to show
+                        //Has to be with -1 to sync with the index, since list index
+                        //Starts at 0
                         GroupMember personToShow = listOfMembers[readMore - 1];
 
+                        //Displays the chosen person with help from ToString();
                         Console.WriteLine(personToShow);
 
+                        //Asks the user to press enter to return to the menu
+                        //I think this creates a bit of more useability feel
                         returnToMenu();
 
                         break;
@@ -64,15 +73,20 @@ namespace Secret_group
                         Console.WriteLine("║---------Would you like to remove?--------║");
                         Console.WriteLine("╚══════════════════════════════════════════╝");
 
-                        displayMembers(listOfMembers);
+                        //Calls function that displays all members
+                        DisplayMembers(listOfMembers);
 
                         //Ask user to choose which person to read about
                         int deletePerson = Convert.ToInt32(Console.ReadLine());
 
+                        //Chose person to delete from the list
+                        //Once again you need to sync with the list index with a -1
                         GroupMember personToDelete = listOfMembers[deletePerson - 1];
 
+                        //Remove the chosen member from the list
                         listOfMembers.Remove(personToDelete);
 
+                        //Asks user to press enter to return to the menu
                         returnToMenu();
 
                         break;
@@ -82,9 +96,10 @@ namespace Secret_group
                         Console.WriteLine("╔══════════════════════════════════════════╗");
                         Console.WriteLine("║------You have sucessfully logged out-----║");
                         Console.WriteLine("╚══════════════════════════════════════════╝");
+                        
                         //Who doesnt love a good ASCII art.
                         //Especially a goose.
-
+                        
                         Console.WriteLine("                                                        _...--.");
                         Console.WriteLine("                                        _____......----'     .'");
                         Console.WriteLine("                                  _..-''                   .'");
@@ -103,9 +118,15 @@ namespace Secret_group
                         Console.WriteLine(" `---'                                   _.'   '");
                         Console.WriteLine("                                       /.'    .'");
                         Console.WriteLine("                                        /.'/.'");
+                        
+                        
+                        //Sets loggedIn to false gets you out of the loop
+                        //And thereby exits the program
                         loggedIn = false;
                         break;
 
+                    //setting a default switch case if you type something else than
+                    //1,2,3 or 4. So that it forces you to type any of those choices
                     default:
                         Console.WriteLine("╔══════════════════════════════════════════╗");
                         Console.WriteLine("║------------Invalid choice----------------║");
@@ -117,6 +138,8 @@ namespace Secret_group
             }
         }
 
+        //Method that will ask the user to press enter to return to the main menu
+        //After the chosen menu choice flow has ended
         private static void returnToMenu()
         {
             Console.WriteLine("╔══════════════════════════════════════════╗");
@@ -126,18 +149,19 @@ namespace Secret_group
             Console.Clear();
         }
 
-        private static List<GroupMember> addMembersToList()
+        //Method that will put every GroupMember into a list with their details
+        private static List<GroupMember> AddMembersToList()
         {
             //Define every member with the info from class MemberDetails
-            GroupMember andrei = MemberDetails.memberAndrei();
-            GroupMember jesper = MemberDetails.memberJesper();
-            GroupMember leroy = MemberDetails.memberLeroy();
-            GroupMember malin = MemberDetails.memberMalin();
-            GroupMember jonna = MemberDetails.memberJonna();
-            GroupMember gurra = MemberDetails.memberGurra();
-            GroupMember linus = MemberDetails.memberLinus();
-            GroupMember nils = MemberDetails.memberNils();
-            GroupMember yulrok = MemberDetails.memberYulrok();
+            GroupMember andrei = MemberDetails.MemberAndrei();
+            GroupMember jesper = MemberDetails.MemberJesper();
+            GroupMember leroy = MemberDetails.MemberLeroy();
+            GroupMember malin = MemberDetails.MemberMalin();
+            GroupMember jonna = MemberDetails.MemberJonna();
+            GroupMember gurra = MemberDetails.MemberGurra();
+            GroupMember linus = MemberDetails.MemberLinus();
+            GroupMember nils = MemberDetails.MemberNils();
+            GroupMember yulrok = MemberDetails.MemberYulrok();
 
             //Add every above member to the list
             List<GroupMember> listOfMembers = new List<GroupMember> { 
@@ -156,9 +180,10 @@ namespace Secret_group
             return listOfMembers;
         }
 
-        private static void displayMembers(List<GroupMember> listOfMembers)
+        //Method that works to display all the Groupmembers in numerical order
+        private static void DisplayMembers(List<GroupMember> listOfMembers)
         {
-            Console.WriteLine("╔══════════════════════════════════════════╗");
+            Console.WriteLine("════════════════════════════════════════════");
             int i = 1;
             foreach (var member in listOfMembers)
             {
@@ -167,7 +192,7 @@ namespace Secret_group
 
                 i++;
             }
-            Console.WriteLine("╚══════════════════════════════════════════╝");
+            Console.WriteLine("════════════════════════════════════════════");
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Secret_group
             LoginClass.LoginTry();
 
             //Get method menuOfActions from class MenuList
-            MenuList.menuOfActions();
+            MenuList.MenuOfActions();
 
         }
     }
